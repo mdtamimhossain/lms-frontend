@@ -54,7 +54,7 @@ h3{
     font-size: 1.6rem;
 }
 h4{
-    font-size: 2.4rem;
+    font-size: 1.4rem;
 }
 a{
     color: var(--color-white);
@@ -118,7 +118,9 @@ nav button{
 
 }
 .windows-scroll{
-    background: var(--color-primary);
+    background: var(--color-bg2);
+    box-shadow: 0 1.2rem 2rem rgba(0,0,0,0.2);
+    
 }
 /*------------Header section start-----------*/
 header{
@@ -143,7 +145,7 @@ header{
 /*------------Category section start-----------*/
 .categories{
     background: var(--color-bg1);
-    height: 29rem;
+    height: 32rem;
 }
 .category h1{
     line-height: 1;
@@ -158,7 +160,7 @@ gap: 2rem;
 .category_right{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 1.2rem;
+    gap: 1.5rem;
     
 }
 .category_left p{
@@ -166,7 +168,7 @@ gap: 2rem;
 }
 .category{
     background: var(--color-bg2);
-    padding: 2rem;
+    padding: 1.2rem;
     border-radius: 2rem;
     transition: var(--transition);
 }
@@ -196,4 +198,229 @@ gap: 2rem;
 .category p{
     font-size: 0.85rem;
 }
-/*------------Category section start-----------*/
+/*------------Category section end-----------*/
+/*------------Popular course section start-----------*/
+.courses_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.course{
+    background: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent;
+   
+    transition: var(--transition);
+}
+.course:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+.courses h2{
+    margin-top: 4rem
+}
+.course_info{
+    padding: 1rem;
+}
+.course_info p{
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+
+}
+/*------------Popular course section end-----------*/
+/*faq section start*/
+.faqs{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0,0,0,0.5);
+}
+.faqs_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1.5rem;
+}
+.faq{
+    background: var(--color-primary);
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    gap: 1.2rem;
+    height: fit-content;
+    cursor: pointer;
+}
+.faq h4{
+    font-size: 1rem;
+    line-height: 2.2;
+}
+.faq_icon{
+    align-self: flex-start;
+    font-size: 1.2rem;
+}
+.faq p{
+    margin: 0.8rem;
+    display: none;
+}
+.faq.open p{
+    margin: 0.8rem;
+    display: block;
+}
+/*faq section start*/
+/*testimonial section start*/
+.testimonial_container{
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 5rem;
+}
+.testimonial{
+    padding-top: 2rem;
+}
+.avater{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow:hidden ;
+    margin: 0 auto 1rem;
+    border: 1rem solid var(--color-bg1);
+}
+.testimonial_info{
+    text-align: center;
+}
+.testimonial_body{
+    text-align: center;
+    background: var(--color-primary);
+    padding: 2rem;
+    margin-top: 3rem ;
+    position: relative;
+}
+.testimonial_body::before{
+    content: "";
+    display: block;
+    background: linear-gradient(135deg,transparent,var(--color-primary),var(--color-primary));
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: 48%;
+    top: -1.5rem;
+    transform: rotate(45deg);
+}
+/*testimonial section end*/
+/*footer section start*/
+footer{
+    background: var(--color-bg1);
+    padding-top: 5rem;
+}
+.footer_container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5rem;
+    font-size: 0.9rem;
+}
+.footer_container >div h4{
+    margin-bottom: 1.2rem; 
+}
+.footer1 p{
+    margin-bottom:0 0 2rem;
+    
+}
+footer ul li{
+    margin-bottom: 0.7rem;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+}
+.footer_socials{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+.footer_copyright{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--color-bg2);
+}
+/*footer section end*/
+
+/***************************Responsive Design(Tablet)******************/
+@media screen and (max-width:1024px) {
+    .container{
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    nav button{
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+    .close-menu-btn{
+        
+        display: none;
+    }
+    .nav_menu{
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        gap: 0;
+        width: 18rem;
+        flex-direction: column;
+        height: fit-content;
+        display: none;
+       
+    }
+    .nav_menu li{
+        width: 100%;
+        height: 5.8rem;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+    .nav_menu li:nth-child(2){
+        animation-delay: 200ms;
+    }   
+     .nav_menu li:nth-child(3){
+        animation-delay: 400ms;
+    }   
+     .nav_menu li:nth-child(4){
+        animation-delay: 600ms;
+    }
+    @keyframes animateNavItems {
+        0% {
+            transform: rotateZ(-90deg) rotateX(90deg)scale(0.1);
+
+        }
+        100% {
+            transform: rotateZ(0) rotateX(0) scale(1);
+            opacity: 1;
+        }
+    }
+    .nav_menu li a{
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        
+        
+    }
+    .nav_menu li a:hover{
+        background: var(--color-bg2);
+        color: var(--color-white);
+        transition: var(--transition);
+    }
+
+}
+/***************************Responsive Design(Tablet) end******************/
