@@ -227,6 +227,50 @@ gap: 2rem;
     font-size: 0.9rem;
 
 }
+.search{
+    
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+   margin-bottom: 2rem;   
+   background-size: cover;
+}
+.search_bar{
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 5rem;
+    padding: 5px 20px;
+
+}
+.search_bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    color: #cac7ff;
+    padding: 0px 1rem;
+}
+::placeholder{
+    color: #cac7ff;
+}
+.search_bar button img{
+width: 1.7rem;
+
+}
+.search_bar button{
+border: 0;
+width: 50px;
+height: 50px;
+padding-left: 0.6rem;
+border-radius: 50%;
+background: #58629b;
+cursor: pointer;
+
+}
 /*------------Popular course section end-----------*/
 /*faq section start*/
 .faqs{
@@ -458,6 +502,7 @@ footer ul li a:hover{
     .footer_container{
         grid-template-columns: 1fr 1fr;
     }
+ 
 }
 /***************************Responsive Design(Tablet) end******************/
 /***************************Responsive Design(mobile) start******************/
@@ -508,6 +553,42 @@ footer ul li a:hover{
     }
     .footer_socials{
         justify-content: center;
+    }
+    .search_bar{
+      
+        max-width: 300px;
+       
+        display: flex;
+        align-items: center;
+        border-radius: 5rem;
+       
+    
+    }
+    .search_bar input{
+        background: transparent;
+        flex: 1;
+        border: 0;
+        outline: none;
+        font-size: 16px;
+        color: #cac7ff;
+        padding: 0px 0.5rem;
+    }
+    ::placeholder{
+        color: #cac7ff;
+    }
+    .search_bar button img{
+    width: 1.2rem;
+    
+    }
+    .search_bar button{
+    border: 0;
+    width: 35px;
+    height: 35px;
+    padding-left: 0.4rem;
+    border-radius: 50%;
+    background: #58629b;
+    cursor: pointer;
+    
     }
 }
 /***************************Responsive Design(mobile) end******************/
